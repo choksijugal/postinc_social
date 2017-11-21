@@ -1,0 +1,51 @@
+body {
+    background: rgb(39,50,56);
+}
+#navbar, buton.navbar-toggle {
+    background: black;
+    border: none;
+    border-radius: 0px;
+    padding: 0px 0px 0px 10px;
+}
+a#brand {
+    font-family: Garamond, serif;
+    color: #fff;
+    font-size: 26px;
+    letter-spacing: 2px;
+}
+#drop.dropdown-toggle {
+    color: #fff !important;
+}
+#check.open>a, #hover>a:hover {
+    background: rgb(40,40,40);
+}
+.form-control {
+    border-radius: 0px;
+}
+button#search {
+    border-radius: 0px;
+    height: 34px;
+    margin-left: -4px;
+}
+#badge {
+    font-size: 20px;
+}
+.badge-notif:after, .badge-message:after{
+    position: absolute;
+    background: rgba(224,71,65,1);
+    height:1.75rem;
+    top:1rem;
+    right:1rem;
+    width:1.75rem;
+    text-align: center;
+    line-height: 1.75rem;;
+    font-size: 1.25rem;
+    border-radius: 50%;
+    color:white;
+}
+.badge-message:after {
+    content: "10";
+}
+.badge-notif:after {
+    content: "2";
+}
