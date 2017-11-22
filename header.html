@@ -61,7 +61,7 @@
                 <ul class="nav navbar-nav navbar-right">
 
                     <li class="dropdown" id="check">
-                        <a href="#" class="dropdown-toggle" id="drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i id="badge" class="fa fa-paper-plane badge-message"></i></a>
+                        <a href="#" class="dropdown-toggle" id="drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><div class="replace"><i id="badge" class="fa fa-paper-plane badge-message"></i></div></a>
                         <ul class="dropdown-menu drop-wide">
                             <li>
                                 <a href="#">
@@ -130,85 +130,87 @@
                     </li>
 
                     <li class="dropdown" id="check">
-                        <a href="#" class="dropdown-toggle" id="drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i id="badge"  class="fa fa-bell badge-notif"></i></a>
+                        <a href="#" class="dropdown-toggle" id="drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><div class="replace1"><i id="badge"  class="fa fa-bell badge-notif"></i></div></a>
                         <ul class="dropdown-menu drop-wide">
-                                
-                                <li>
-                                    <a href="#">
-                                        <div class="media">
-                                            <div class="media-left">
-                                                <img class="media-object" id="message_pic" src="img/ProfilePic2.jpg" alt="...">
-                                            </div>
-                                            <div class="media-body">
-                                                <div id="notification"><b>Aakarsh Chopra</b> commented on your post.</div>
-                                                <div id="message_date">Just now</div>
-                                            </div> 
+
+                            <li>
+                                <a href="#">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img class="media-object" id="message_pic" src="img/ProfilePic2.jpg" alt="...">
                                         </div>
-                                    </a>
-                                </li>
-                                <li role="separator" class="divider"></li>
-                                
-                                <li>
-                                    <a href="#">
-                                        <div class="media">
-                                            <div class="media-left">
-                                                <img class="media-object" id="message_pic" src="img/ProfilePic3.jpg" alt="...">
-                                            </div>
-                                            <div class="media-body">
-                                                    <div id="notification"><b>Deep Sahni</b> liked your post.</div>
-                                                    <div id="message_date">3 minutes ago</div>
-                                            </div>
+                                        <div class="media-body">
+                                            <div id="notification"><b>Aakarsh Chopra</b> commented on your post.</div>
+                                            <div id="message_date">Just now</div>
                                         </div>
-                                    </a>
-                                </li>
-                                <li role="separator" class="divider"></li>
-                                <li>
-                                        <a href="#">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img class="media-object" id="message_pic" src="img/ProfilePic1.jpg" alt="...">
-                                                </div>
-                                                <div class="media-body">
-                                                <div id="notification"><b>Jugal Choksi</b> commented on your post.</div>
-                                                    <div id="message_date">2 days ago</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li role="separator" class="divider"></li>
-                                <li>
-                                    <a href="#">
-                                        <div class="media">
-                                            <div class="media-left">
-                                                <img class="media-object" id="message_pic" src="img/ProfilePic2.jpg" alt="...">
-                                            </div>
-                                            <div class="media-body">
-                                                    <div id="notification"><b>Aakarsh Chopra</b> reacted to your post.</div>
-                                                <div id="message_date">5 days ago</div>
-                                            </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+
+                            <li>
+                                <a href="#">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img class="media-object" id="message_pic" src="img/ProfilePic3.jpg" alt="...">
                                         </div>
-                                    </a>
-                                </li>
-                                <li role="separator" class="divider"></li>
-                                <li>
-                                    <p align="right"><a href="#"><b>View all Notifications <i class="fa fa-chevron-right" id="right-arrow"></i></b></a></p>
-                                </li>
-                            </ul>
+                                        <div class="media-body">
+                                            <div id="notification"><b>Deep Sahni</b> liked your post.</div>
+                                            <div id="message_date">3 minutes ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img class="media-object" id="message_pic" src="img/ProfilePic1.jpg" alt="...">
+                                        </div>
+                                        <div class="media-body">
+                                            <div id="notification"><b>Jugal Choksi</b> commented on your post.</div>
+                                            <div id="message_date">2 days ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img class="media-object" id="message_pic" src="img/ProfilePic2.jpg" alt="...">
+                                        </div>
+                                        <div class="media-body">
+                                            <div id="notification"><b>Aakarsh Chopra</b> reacted to your post.</div>
+                                            <div id="message_date">5 days ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <p align="right"><a href="#"><b>View all Notifications <i class="fa fa-chevron-right" id="right-arrow"></i></b></a></p>
+                            </li>
+                        </ul>
                     </li>
                     <li class="dropdown" id="check">
-                        <a href="#" class="dropdown-toggle" id="drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="img/ProfilePic.jpg" height="25px" style="margin-top:-5px;padding:0px"></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
+                        <a href="#" class="dropdown-toggle trial" id="drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><div class="replace2"><img src="img/ProfilePic.jpg" height="25px" style="margin-top:-5px;padding:0px"></div></a>
+                        <ul class="dropdown-menu right">
+                            <li><a href="#"><b>@Selfie</b></a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Invite Friends </a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Logout</a></li>
                         </ul>
                     </li>
                 </ul>
                 <form class="navbar-form navbar-right">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="What are you looking for?" size="30">
+                        <input type="text" class="form-control" placeholder="What are you looking for?" autocomplete="off" size="30">
                     </div>
                     <button type="submit" class="btn btn-default" id="search"><span class="glyphicon glyphicon-search"></span></button>
                 </form>
@@ -221,12 +223,64 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script>
+        var parentElem = $('.replace'),
+       bigContent = 'Messages <i id="badge" class="fa fa-paper-plane badge-message"></i>',
+        smallContent = parentElem.html();
+    $(document).ready(function(){
+         replaceContent(parentElem, smallContent, bigContent);
+    });
+    
+    function replaceContent(parent, big, small){
+           if (window.innerWidth < 768) {
+            parent.children().remove();
+            parent.html(small);
+        } else if ( window.innerWidth > 767) {
+            parent.children().remove();
+            parent.html(big);
+        };
+    }
+    </script>
+    <script>
+        var parentElem1 = $('.replace1'),
+        bigContent1 = 'Notifications <i id="badge" class="fa fa-bell badge-notif"></i>',
+        smallContent1 = parentElem1.html();
+    $(document).ready(function(){
+         replaceContent(parentElem1, smallContent1, bigContent1);
+    });
+    
+    </script>
+    <script>
+        var parentElem2 = $('.replace2'),
+          bigContent2 = 'My Profile &nbsp;<img src="img/ProfilePic.jpg" height="25px" style="margin-top:-5px;padding:0px">',
+        smallContent2 = parentElem2.html();
+    $(document).ready(function(){
+         replaceContent(parentElem2, smallContent2, bigContent2);
+    });
+    </script>
+    <!-- <script>
+        var originalContent = '<i id="badge" class="fa fa-paper-plane badge-message"></i>';
+        
+        $(window).resize(function() {
+        if (window.innerWidth < 768) {
+        
+            originalContent = $('.LatestNews').innerHTML;
+        
+            $('.LatestNews').replaceWith('Messages <i id="badge" class="fa fa-paper-plane badge-message"></i>');
+        
+        } else if (window.innerWidth > 768) {
+        
+            // Change back to original .LatestNews
+            $('.LatestNews').innerHTML = originalContent;
+        }
+        }).resize();
+    </script> -->
+    <!-- <script>
         $('ul.nav li.dropdown').hover(function () {
             $(this).find('.dropdown-menu-hover').stop(true, true).delay(00).fadeIn(300);
         }, function () {
             $(this).find('.dropdown-menu-hover').stop(true, true).delay(00).fadeOut(300);
         });
-    </script>
+    </script> -->
 </body>
 
 </html>

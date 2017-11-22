@@ -16,6 +16,9 @@ a#brand {
 #drop.dropdown-toggle {
     color: #fff !important;
 }
+#hover.open>a {
+    background: black;
+}
 #check.open>a, #hover>a:hover {
     background: rgb(40,40,40);
 }
@@ -75,4 +78,54 @@ p>a, p>a:hover {
 }
 #notification {
     margin-top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+   
+#check.open>.dropdown-toggle {
+    box-shadow: inset 0px -2px 0px #3fc3ff;
+}
+#check>.dropdown-toggle:hover {
+box-shadow:  inset 0px -2px 0px #3fc3ff;
+-webkit-transition: ease-in-out 0.3s;
+-moz-transition: ease-in-out 0.3s;
+-ms-transition: ease-in-out 0.3s;
+-o-transition: ease-in-out 0.3s;
+transition: ease-in-out 0.3s;
+}
+
+#hover.dropdown .dropdown-menu {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+#hover.dropdown:hover .dropdown-menu {
+    max-height: 400px;
+    opacity: 1;
+}
+#check.dropdown .dropdown-menu {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+#check.open>.dropdown-menu {
+    max-height: 400px;
+    opacity: 1;
+}
 }
