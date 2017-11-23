@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="css\header.css">
 </head>
@@ -59,9 +58,25 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-
+                    <li id="mobile">
+                        <a href="#" class="dropdown-toggle" id="drop" >
+                            <div class="">Notifications <i id="badge" class="badge-notif"></i></div>
+                        </a>
+                    </li>
+                    <li id="mobile">
+                        <a href="#" class="dropdown-toggle" id="drop" >
+                            <div class="">Messages <i id="badge" class="badge-message"></i></div>
+                        </a>
+                    </li>
+                    <li id="mobile">
+                        <a href="#" class="dropdown-toggle" id="drop" >
+                            <div class=""><img src="img/ProfilePic.jpg" height="25px" style="margin-top:-5px;padding:0px">&nbsp; My Profile</div>
+                        </a>
+                    </li>
                     <li class="dropdown" id="check">
-                        <a href="#" class="dropdown-toggle" id="drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><div class="replace"><i id="badge" class="fa fa-paper-plane badge-message"></i></div></a>
+                        <a href="#" class="dropdown-toggle" id="drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <div class="replace"><i id="badge" class="fa fa-paper-plane badge-message"></i></div>
+                        </a>
                         <ul class="dropdown-menu drop-wide">
                             <li>
                                 <a href="#">
@@ -128,9 +143,10 @@
                             </li>
                         </ul>
                     </li>
-
                     <li class="dropdown" id="check">
-                        <a href="#" class="dropdown-toggle" id="drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><div class="replace1"><i id="badge"  class="fa fa-bell badge-notif"></i></div></a>
+                        <a href="#" class="dropdown-toggle" id="drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <div class="replace1"><i id="badge" class="fa fa-bell badge-notif"></i></div>
+                        </a>
                         <ul class="dropdown-menu drop-wide">
 
                             <li>
@@ -196,7 +212,9 @@
                         </ul>
                     </li>
                     <li class="dropdown" id="check">
-                        <a href="#" class="dropdown-toggle trial" id="drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><div class="replace2"><img src="img/ProfilePic.jpg" height="25px" style="margin-top:-5px;padding:0px"></div></a>
+                        <a href="#" class="dropdown-toggle trial" id="drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <div class="replace2"><img src="img/ProfilePic.jpg" height="25px" style="margin-top:-5px;padding:0px"></div>
+                        </a>
                         <ul class="dropdown-menu right">
                             <li><a href="#"><b>@Selfie</b></a></li>
                             <li><a href="#">Settings</a></li>
@@ -209,8 +227,8 @@
                     </li>
                 </ul>
                 <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="What are you looking for?" autocomplete="off" size="30">
+                    <div class="form-group" id="search-bar">
+                        <input type="text" id="search" class="form-control" placeholder="What are you looking for?" autocomplete="off" size="30">
                     </div>
                     <button type="submit" class="btn btn-default" id="search"><span class="glyphicon glyphicon-search"></span></button>
                 </form>
@@ -222,65 +240,41 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <script>
+    <!-- <script>
         var parentElem = $('.replace'),
-       bigContent = 'Messages <i id="badge" class="fa fa-paper-plane badge-message"></i>',
-        smallContent = parentElem.html();
-    $(document).ready(function(){
-         replaceContent(parentElem, smallContent, bigContent);
-    });
-    
-    function replaceContent(parent, big, small){
-           if (window.innerWidth < 768) {
-            parent.children().remove();
-            parent.html(small);
-        } else if ( window.innerWidth > 767) {
-            parent.children().remove();
-            parent.html(big);
-        };
-    }
+            bigContent = 'Messages <i id="badge" class="badge-message"></i>',
+            smallContent = parentElem.html();
+        $(document).ready(function () {
+            replaceContent(parentElem, smallContent, bigContent);
+        });
+
+        function replaceContent(parent, big, small) {
+            if (window.innerWidth < 768) {
+                parent.children().remove();
+                parent.html(small);
+            } else if (window.innerWidth > 767) {
+                parent.children().remove();
+                parent.html(big);
+            };
+        }
     </script>
     <script>
         var parentElem1 = $('.replace1'),
-        bigContent1 = 'Notifications <i id="badge" class="fa fa-bell badge-notif"></i>',
-        smallContent1 = parentElem1.html();
-    $(document).ready(function(){
-         replaceContent(parentElem1, smallContent1, bigContent1);
-    });
-    
+            bigContent1 = 'Notifications <i id="badge" class="badge-notif"></i>',
+            smallContent1 = parentElem1.html();
+        $(document).ready(function () {
+            replaceContent(parentElem1, smallContent1, bigContent1);
+        });
     </script>
     <script>
         var parentElem2 = $('.replace2'),
-          bigContent2 = 'My Profile &nbsp;<img src="img/ProfilePic.jpg" height="25px" style="margin-top:-5px;padding:0px">',
-        smallContent2 = parentElem2.html();
-    $(document).ready(function(){
-         replaceContent(parentElem2, smallContent2, bigContent2);
-    });
-    </script>
-    <!-- <script>
-        var originalContent = '<i id="badge" class="fa fa-paper-plane badge-message"></i>';
-        
-        $(window).resize(function() {
-        if (window.innerWidth < 768) {
-        
-            originalContent = $('.LatestNews').innerHTML;
-        
-            $('.LatestNews').replaceWith('Messages <i id="badge" class="fa fa-paper-plane badge-message"></i>');
-        
-        } else if (window.innerWidth > 768) {
-        
-            // Change back to original .LatestNews
-            $('.LatestNews').innerHTML = originalContent;
-        }
-        }).resize();
-    </script> -->
-    <!-- <script>
-        $('ul.nav li.dropdown').hover(function () {
-            $(this).find('.dropdown-menu-hover').stop(true, true).delay(00).fadeIn(300);
-        }, function () {
-            $(this).find('.dropdown-menu-hover').stop(true, true).delay(00).fadeOut(300);
+            bigContent2 = 'My Profile &nbsp;<img src="img/ProfilePic.jpg" height="25px" style="margin-top:-5px;padding:0px">',
+            smallContent2 = parentElem2.html();
+        $(document).ready(function () {
+            replaceContent(parentElem2, smallContent2, bigContent2);
         });
     </script> -->
+
 </body>
 
 </html>

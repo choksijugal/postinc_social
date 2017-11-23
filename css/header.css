@@ -1,16 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 body {
     background: rgb(39,50,56);
+    font-family: 'Montserrat', sans-serif;
 }
 #navbar, buton.navbar-toggle {
     background: black;
     border: none;
     border-radius: 0px;
-    padding: 0px 0px 0px 10px;
 }
 a#brand {
     font-family: Garamond, serif;
     color: #fff;
-    font-size: 26px;
+    font-size: 30px;
     letter-spacing: 2px;
 }
 #drop.dropdown-toggle {
@@ -73,9 +74,6 @@ img#message_pic {
 p>a, p>a:hover {
     text-decoration: none;
 }
-.dropdown-menu-hover {
-    min-width: 200px !important;
-}
 #notification {
     margin-top: 10px;
 }
@@ -127,5 +125,36 @@ transition: ease-in-out 0.3s;
 #check.open>.dropdown-menu {
     max-height: 400px;
     opacity: 1;
+}
+.dropdown-menu-hover {
+    min-width: 200px !important;
+}
+#navbar, buton.navbar-toggle {
+    padding: 0px 0px 0px 10px;
+}
+#mobile {
+    display: none;
+}
+}
+@media only screen and (max-width: 768px) {
+ #check {
+     display: none;
+   }
+#search-bar {
+    display: inline !important;
+}
+input#search {
+    width: 87%;
+    display: inline !important;
+}
+button#search {
+    display: inline !important;
+    float: right;
+}
+.dropdown-menu-hover {
+    background: rgb(22,22,22) !important;
+}
+.dropdown-menu-hover>li>a {
+    color: #fff !important;
 }
 }
