@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 body {
-    background: rgb(39,50,56);
+    background: #263238;
     font-family: 'Montserrat', sans-serif;
 }
 #navbar, buton.navbar-toggle {
@@ -40,7 +40,7 @@ button#search {
 }
 .badge-notif:after, .badge-message:after{
     position: absolute;
-    background: rgba(224,71,65,1);
+    background: #f44336;
     height:1.75rem;
     top:1rem;
     right:1rem;
