@@ -12,8 +12,8 @@ body {
 a#brand {
     font-family: 'Cormorant Garamond', serif;
     color: #fff;
-    font-size: 30px;
-    letter-spacing: 2px;
+    font-size: 26px;
+    letter-spacing: 8px;
 }
 #drop.dropdown-toggle {
     color: #fff !important;
@@ -168,6 +168,11 @@ transition: ease-in-out 0.2s;
 #unread:hover {
     background: #f5f5f5;
 }
+input#search, button#search {
+    height: 30px;
+    margin-top: 2px;
+}
+
 }
 @media only screen and (max-width: 768px) {
  #check, #hover {
@@ -177,12 +182,13 @@ transition: ease-in-out 0.2s;
     display: inline !important;
 }
 input#search {
-    width: 87%;
+    width: 90%;
     display: inline !important;
 }
 button#search {
     display: inline !important;
     float: right;
+    width: 10%;
 }
 .dropdown-menu-hover {
     background: rgb(22,22,22) !important;
