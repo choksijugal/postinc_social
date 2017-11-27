@@ -4,10 +4,17 @@ body {
     background: #263238;
     font-family: 'PT Sans', sans-serif;
 }
-#navbar, buton.navbar-toggle {
+#navbar, button.navbar-toggle {
     background: black;
-    border: none;
+    border: none !important;
     border-radius: 0px;
+}
+.icon-bar {
+    height: 3px !important;
+    background-color: #fff !important;
+}
+button.navbar-toggle:hover, button.navbar-toggle:focus {
+    background: #000 !important;
 }
 a#brand {
     font-family: 'Cormorant Garamond', serif;
@@ -197,7 +204,7 @@ button#search {
     color: #fff !important;
 }
 .navbar-form {
-    border-top: none;
+    border-style: none !important;
     margin-top: -25px;
 }
 }
