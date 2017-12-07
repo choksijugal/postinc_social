@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+/* @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow'); */
+body {
+    
+    background: #263238;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    color: #e5e5e5;
+    font-family: 'PT Sans', sans-serif;
+    /* font-family: 'PT Sans Narrow', sans-serif; */    
+}
+
+.sidebar {
+    background: #37474f;
+    margin-top: 16px;
+    padding: 10px 25px;
+}
+
+div.main {
+    /* background-color: #263238; */
+    /* height: 90vh; */
+    padding: 3vh 1vw;
+}
+
+div.main > div.col-sm-3 {
+    position: sticky;
+    top: 0;
+}
+
+/* div.main > div:nth-child(odd) > div */
+div.main > div > div
+{
+    background-color: none;
+    padding: 3vh 2vw 5vh 2vw;
+    margin: 2vh 0;
+    border: none;
+}
+
+/* div.main > div:nth-child(odd) > div > ul */
+div.main > div > div > ul
+{
+    margin: 1vh 0.5vw;
+}
+
+hr {
+    border-color: #3fc3ff;
+    background-color: #3fc3ff;
+    color: #3fc3ff;
+    margin: 1vh 0;
+}
+
+.chip {
+    width: 100%;
+    /* align-content: center; */
+    /* display: inline-block; */
+    padding: 0 30px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 60px;
+    border-radius: 30px;
+    margin: 25px 0px;
+}
+
+.chip:hover {
+    background-color: grey;
+}
+
+.chip>img {
+    float: left;
+    margin: -10px 15px 0 -40px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+.chip>span::before
+{
+    content: "@";
+}
+
+div.status > form
+{
+    position:relative;
+    overflow:hidden;
+    white-space: nowrap;
+}
+
+div.status > form > input.form-control
+{
+    width: 78%;
+    margin: 0;
+    display: inline-block;
+    overflow: hidden;
+}
+div.status > form > button.form-control
+{
+    width: 20%;
+    margin: 0;
+    background-color: #3fc3ff!important;
+    display: inline;
+    float: right;
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+div.name
+{
+    font-size: 140%;
+}
+
+.postprofilepic
+{
+    vertical-align: middle;
+    height: 40px;
+    border-radius: 40px;
+    margin-right: 10px;
+}
+
+.posttext
+{
+    padding: 13px 5px 5px 5px;
+    font-size: 110%;
+}
+.postimg>img {
+max-height: 100%;
+max-width: 100%;
+}
+
+.socialactions {
+    background-color: #212121;
+    clear: both;
+    overflow: hidden;
+    margin: 0px -25px;
+}
+
+div.socialactions > div
+{
+    float: left;
+    padding: 8px;
+    cursor: pointer;
+    /* margin: 1px; */
+    /* border: thin #e5e5e5 solid; */
+}
+
+
+div.socialactions > div:hover, .hovertab
+{
+    border-width: 0 0 2px 0;
+    border-color: #3fc3ff;
+    border-style: solid;
+}
+
+.socialactions > div.r
+{
+    float: right;
+}
+
+.socialactions > div.r::before
+{
+    content: 'â™¡';
+    font-size: 150%;
+    line-height: 10px;
+    align-content: center!important;
+}
+
+.act
+{
+    color: #333;
+    display: none;
+}
+
+.actions,.inputbox>input.form-control {
+    background-color: #e5e5e5!important;
+}
+.actions {
+    margin: 0px -25px;
+}
+
+.inputbox {
+    color: darkgray!important;
+    white-space: nowrap;
+    position:relative;
+    overflow:hidden;
+    border-width: 0 0 1.4px 0;
+    border-color: darkgray;
+    border-style: solid;
+    /* align-content: center; */
+}
+
+.inputbox >input.form-control {
+    padding: 25px 15px;
+    width: calc(100% - 70px);
+    border: 0px;
+    display: inline-block;
+    overflow: hidden;
+    color: darkgray!important;
+    transition: 0.2s all ease-in; 
+}
+
+.inputbox >input.form-control:focus {
+    /* background-color: white!important; */
+    border-style: none;
+    color: black!important;
+}
+
+.inputbox >button
+{
+    background-color: #3fc3ff!important;
+    border: 0px;
+    padding: 4px 4px;
+    margin: 9px 3px;
+    display: inline;
+    position:absolute;
+    /* width: 40px; */
+    top:0;
+    right:0;
+}
+
+.comment
+{
+    padding: 8px;
+}
+
+.commentprofilepic
+{
+    vertical-align: middle;
+    height: 30px;
+    border-radius: 40px;
+    margin-right: 5px;
+}
+
+.comment_name
+{
+    color: black;
+    font-weight: 600;
+}
+.commenttext
+{
+    color: black;
+}
+
+/* Added to adapt the header for this page */
+#message, .media-heading>b, #notification, #notification>b, #message_date, #uname
+{
+    color: #333!important;
+}
