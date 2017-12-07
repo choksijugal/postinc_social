@@ -14,14 +14,17 @@ body {
 
 .sidebar {
     background: #37474f;
-    margin-top: 16px;
     padding: 10px 25px;
 }
 
+#image {
+    margin: 0px;
+    padding: 0px;
+}
 div.main {
     /* background-color: #263238; */
     /* height: 90vh; */
-    padding: 3vh 1vw;
+    padding-top: 50px;
 }
 
 div.main > div.col-sm-3 {
@@ -123,6 +126,7 @@ div.name
     padding: 13px 5px 5px 5px;
     font-size: 110%;
 }
+
 .postimg>img {
 max-height: 100%;
 max-width: 100%;
