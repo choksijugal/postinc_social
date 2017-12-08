@@ -52,8 +52,7 @@ body {
       display: inline-block;
   }
   #right {
-      width: 100%;
-      text-align: center;
+      float: right;
   }
   #results {
       width: 100%;
