@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+body {
+    
+    background: #263238;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    color: #e5e5e5;
+    font-family: 'PT Sans', sans-serif;
+    /* font-family: 'PT Sans Narrow', sans-serif; */    
+}
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    /* top: 0;
+    bottom: 0;
+    left: 0; */
+    /* right: 0; */
+    height: 13.33vw;
+    width: 21.4%;
+    opacity: 0;
+    transition: .25s ease-in-out;
+    background-color: rgba(0,0,0,0.75);
+  }
+  
+  #tile:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    float: center;
+  }
+
+  #top_bar {
+      background: rgb(22,22,22);
+      width:100%;
+      padding: 10px 3.5%;
+      font-size: 24px;
+  }
+  #left {
+      display: inline-block;
+  }
+  #right {
+      float: right;
+  }
+  #results {
+      width: 100%;
+      padding: 2vw 2%;
+      margin: 0px;
+  }
+  #tile {
+    height: 13.33vw;
+    width: 22.2%;
+    background: url('img/tea.jpg');
+    display: inline-block;
+    margin: 1.2%;
+    background-size: cover;
+    background-position: center;
+  }
+  #stats {
+      width: 33.33%;
+      float: left;
+      display: inline-block;
+      text-align: center;
+      margin-top: 3.5vw;
+  }
+  #stats>i {
+      font-size: 1.5vw;
+      margin-bottom: 0.35vw;
+  }
+  #author {
+      margin: 1vw;
+      font-size: 1.25vw;  
+  }
+
+  @media only screen and (max-width: 786px) {
+      #top_bar {
+        display: none;
+      }
+      #tile {
+        width: 49.4%;
+        height: 47vw;
+        margin: 0%;
+      }
+      .overlay {
+          width: 47.4%;
+          height: 47vw;
+      }
+      #stats>i {
+          font-size: 3.5vw;
+      }
+      #stats {
+          margin-top: 12vw;
+      }
+      #author {
+          font-size: 3.5vw;
+            margin: 5vw 3vw;
+      }
+  }
