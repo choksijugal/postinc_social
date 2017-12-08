@@ -28,7 +28,7 @@ body {
     width: 21.4%;
     opacity: 0;
     transition: .25s ease-in-out;
-    background-color: rgba(0,0,0,0.75);
+    background-color: rgba(0,0,0,0.6);
   }
   
   #tile:hover .overlay {
