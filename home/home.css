@@ -75,6 +75,7 @@ a, a:hover {
 img#logo1 {
     height: 50vh;
     margin-top: 20vh;
+    max-width: 50%;
 }
 #center-align {
     text-align: center !important;
