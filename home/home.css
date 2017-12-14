@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
+body {
+    background: #263238;
+    font-family: 'PT Sans', sans-serif;
+    color: #fff;
+}
+
+#navbar {
+    width: 100%;
+    background: #000;
+    height: 10vh;
+
+}
+#brand {
+    font-family: 'Cormorant Garamond', serif;
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 8px;
+    margin: 2vh;
+    line-height: 10vh;
+}
+
+#input,#input1 {
+    height: 4vh;
+    border-radius: 0px;
+    margin: 2vh 1% 0px 1%;
+    display: inline;
+    /* float: right; */
+}
+#input {
+    width:36%;
+}
+#input1, #input2 {
+    width: 14%;
+    line-height: 1vh;
+    border: none;
+    background: #3fc3ff;
+    color: #fff;
+}
+#input2 {
+    width: 30%;
+    height: 40px;
+    border-radius: 0px;
+    margin-left: 35%;
+    margin-top: 20px;
+    font-size: 18px;
+}
+a, a:hover {
+    text-transform: none;
+    color: #fff;
+}
+#forgot {
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    margin-left: 15.5vw;
+    top: 7vh;
+    line-height: 1vh;
+}
+#wrapper {
+    display: inline;
+     float:right;
+     width: 39%;
+}
+#forgot1 {
+    display: none;
+}
+#logo {
+    display: none;
+}
+#main {
+    height: 90vh;
+}
+img#logo1 {
+    height: 50vh;
+    margin-top: 20vh;
+}
+#center-align {
+    text-align: center !important;
+}
+label {
+    text-align:left;
+    font-size: 16px;
+}
+#form_group {
+    margin-bottom: 20px;
+}
+.last-lin {
+    margin-bottom: 40px !important;
+}
+.first-lin {
+    margin-top: 40px !important;
+}
+.second {
+    height: 100%;
+    padding-top: 200px;
+}
+#title {
+    font-size: 30px;
+    border-style: solid;
+    padding: 10px 0px 10px 0px;
+    border-color: #3fc3ff;
+    border-width: 0px 0px 1px 0px;
+}
+#boring {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+}
+@media only screen and (max-width: 786px) {
+    #brand {
+        display: none !important;
+    }
+    #navbar {
+        background: none;
+    }
+    #wrapper {
+        width:100%;
+    }
+    #input {
+        height: 30px;
+        width: 60%;
+        margin: 5px 20% 5px 20%;
+    }
+    #input1 {
+        height: 30px;
+        width: 30%;
+        margin: 10px 35% 10px 35%;
+    }
+    #forgot {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        margin: 20px 0px 0px 0px;
+        text-align: center;
+    }
+    #forgot1 {
+        display: block;
+        margin-top: 60px;
+        text-align: center;
+        color: #fff;
+    }
+    #signup {
+        color: #3fc3ff;
+    }
+    #logo {
+        display: block;
+        width: 30%;
+        margin: 50px 35% 10px 35%;
+    }
+    #main {
+        display: none;
+    }
+}

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
+body {
+    background: #263238;
+    font-family: 'PT Sans', sans-serif;
+    color: #fff;
+}
+
+
+#input,#input1 {
+    height: 4vh;
+    border-radius: 0px;
+    margin: 2vh 1% 0px 1%;
+    display: inline;
+}
+#input1, #input2 {
+    width: 14%;
+    line-height: 1vh;
+    border: none;
+    background: #3fc3ff;
+    color: #fff;
+}
+#input2 {
+    width: 30%;
+    height: 40px;
+    border-radius: 0px;
+    margin-left: 35%;
+    margin-top: 20px;
+    font-size: 18px;
+}
+a, a:hover {
+    text-transform: none;
+    color: #fff;
+}
+#forgot1 {
+    display: none;
+}
+#logo {
+    display: none;
+}
+
+    #brand {
+        display: none !important;
+    }
+    #navbar {
+        background: none;
+    }
+    #wrapper {
+        width:100%;
+    }
+    #input {
+        height: 30px;
+        width: 60%;
+        margin: 5px 20% 5px 20%;
+    }
+    #input1 {
+        height: 30px;
+        width: 30%;
+        margin: 10px 35% 10px 35%;
+    }
+    #forgot {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        margin: 20px 0px 0px 0px;
+        text-align: center;
+    }
+    #forgot1 {
+        display: block;
+        margin-top: 60px;
+        text-align: center;
+        color: #fff;
+    }
+    #signup {
+        color: #3fc3ff;
+    }
+    #logo {
+        display: block;
+        width: 30%;
+        margin: 50px 35% 10px 35%;
+    }
