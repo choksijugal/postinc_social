@@ -4,6 +4,7 @@ body {
     background: #263238;
     font-family: 'PT Sans', sans-serif;
     color: #fff;
+    font-size: 2vh;
 }
 
 #navbar {
@@ -15,8 +16,8 @@ body {
 #brand {
     font-family: 'Cormorant Garamond', serif;
     color: #fff;
-    font-size: 30px;
-    letter-spacing: 8px;
+    font-size: 4vh;
+    letter-spacing: 1vh;
     margin: 2vh;
     line-height: 10vh;
 }
@@ -43,7 +44,7 @@ body {
     height: 40px;
     border-radius: 0px;
     margin-left: 35%;
-    margin-top: 20px;
+    margin-top: 2vh;
     font-size: 18px;
 }
 a, a:hover {
@@ -85,29 +86,31 @@ label {
     font-size: 16px;
 }
 #form_group {
-    margin-bottom: 20px;
+    margin-bottom: 3vh;
+    hright: 4vh;
 }
 .last-lin {
-    margin-bottom: 40px !important;
+    margin-bottom: 4vh !important;
 }
 .first-lin {
-    margin-top: 40px !important;
+    margin-top: 4vh !important;
 }
 .second {
     height: 100%;
-    padding-top: 200px;
+    padding-top: 24vh;
 }
 #title {
-    font-size: 30px;
+    font-size: 3.8vh;
     border-style: solid;
     padding: 10px 0px 10px 0px;
     border-color: #3fc3ff;
     border-width: 0px 0px 1px 0px;
 }
 #boring {
+    font-size: 2vh;
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 2vh;
+    right: 2vh;
     text-align: right;
 }
 @media only screen and (max-width: 786px) {
