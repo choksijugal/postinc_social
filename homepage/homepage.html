@@ -101,7 +101,7 @@
                     </form>
                 </div>
                 <!-- Add the list of posts here -->
-                <div>
+                <div class="post" id="postID">
                     <div class="name">
                         <img src="img/ProfilePic2.jpg" alt="" class="postprofilepic">
                         Aakarsh Chopra
@@ -126,7 +126,7 @@
                                     <input type="text" class="form-control" placeholder="Comment Something...">
                                     <button class="form-control btn-primary">Comment</button>
                                 </div>
-                            <div class="act" id="act_suggest">
+                            <div class="act" id="act_suggest_postID">
     
                                 <!-- This is a block of comment. Use it as a template while looping through comments -->
                                 <div class="comment">
@@ -140,10 +140,10 @@
                                 </div>
     
                             </div>
-                            <div class="act" id="act_comment">
+                            <div class="act" id="act_comment_postID">
                                 Comment blocks go here
                             </div>
-                            <div class="act" id="act_ask">
+                            <div class="act" id="act_ask_postID">
                                 Ask blocks go here
                             </div>
                             </div>
@@ -170,8 +170,15 @@
             // });
             $('.socialactions>div.l').click(function() {
                 console.log($(this).attr('id'));
+                var postID = $(this).parents('#postID').attr('id');
+
+                // Fade out all the divs
                 $('.act').fadeOut();
-                $('#act_'+$(this).attr('id')).fadeIn();
+
+                // Fade in the tab which is demanded
+                $('#act_'+$(this).attr('id')+'_'+postID).fadeIn();
+
+                // Remove the selected underline from all other tab buttons
                 $('.socialactions>div.l').removeClass('hovertab');
                 $('#'+$(this).attr('id')).addClass('hovertab');
             });
