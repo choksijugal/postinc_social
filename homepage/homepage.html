@@ -106,7 +106,10 @@
                         <img src="img/ProfilePic2.jpg" alt="" class="postprofilepic">
                         Aakarsh Chopra
                     </div>
-                    <div class="posttext">Tea and Rains!<3</div>
+                    <div class="posttext">
+                        Tea and Rains!<3
+                        #tea #rains
+                    </div>
                     <div>
                         <div class="postimg">
                             <img src="img/tea.jpg" alt="" class="postimg">
@@ -182,6 +185,15 @@
                 $('.socialactions>div.l').removeClass('hovertab');
                 $('#'+$(this).attr('id')).addClass('hovertab');
             });
+
+            function hashup() {
+                $("body").children().each(function() {
+                    // Adds a hyperlink to every hashtagged word, continuing without spaces
+                    $(this).html($(this).html().replace(/(#)([A-Z,a-z,0-9]+)\b/g,"<a href=\"trending_hashtags/$2\">$&</a>"));
+                });
+            }
+            hashup();
+
         </script>
     </body>
     </html>
