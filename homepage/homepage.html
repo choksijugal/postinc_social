@@ -171,6 +171,15 @@
             //         }
             //     });
             // });
+
+            function hashup() {
+                $("body").children().each(function() {
+                    // Adds a hyperlink to every hashtagged word, continuing without spaces
+                    $(this).html($(this).html().replace(/(#)([A-Z,a-z,0-9]+)\b/g,"<a href=\"trending_hashtags/$2\">$&</a>"));
+                });
+            }
+            hashup();
+
             $('.socialactions>div.l').click(function() {
                 console.log($(this).attr('id'));
                 var postID = $(this).parents('#postID').attr('id');
@@ -185,14 +194,6 @@
                 $('.socialactions>div.l').removeClass('hovertab');
                 $('#'+$(this).attr('id')).addClass('hovertab');
             });
-
-            function hashup() {
-                $("body").children().each(function() {
-                    // Adds a hyperlink to every hashtagged word, continuing without spaces
-                    $(this).html($(this).html().replace(/(#)([A-Z,a-z,0-9]+)\b/g,"<a href=\"trending_hashtags/$2\">$&</a>"));
-                });
-            }
-            hashup();
 
         </script>
     </body>
