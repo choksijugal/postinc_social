@@ -12,13 +12,17 @@ body {
     /* font-family: 'PT Sans Narrow', sans-serif; */    
 }
   
+
   .image {
     display: block;
     width: 100%;
     height: auto;
   }
-  
-  .overlay {
+
+  /* Posts tab content */
+  /**/
+  /* .overlay { */
+  .overlay_posts {
     position: absolute;
     /* top: 0;
     bottom: 0;
@@ -30,8 +34,9 @@ body {
     transition: .25s ease-in-out;
     background-color: rgba(0,0,0,0.6);
   }
-  
-  #tile:hover .overlay {
+  /**/
+  #tile_posts:hover .overlay_posts {
+  /* #tile:hover .overlay { */
     opacity: 1;
   }
   
@@ -51,16 +56,22 @@ body {
   #left {
       display: inline-block;
   }
-  #right {
+
+  /**/  
+  /* #right { */
+  #right_posts {
       width: 100%;
       text-align: center;
+      color: #666!important;
   }
-  #results {
+  #posts {
       width: 100%;
-      padding: 2vw 2%;
+      /* padding: 2vw 2%; */
       margin: 0px;
   }
-  #tile {
+  /**/  
+  /* #tile { */
+  #tile_posts {
     height: 13.33vw;
     width: 22.2%;
     background: url('img/tea.jpg');
@@ -69,18 +80,21 @@ body {
     background-size: cover;
     background-position: center;
   }
-  #stats {
+  #stats_posts {
+  /* #stats { */
       width: 33.33%;
       float: left;
       display: inline-block;
       text-align: center;
       margin-top: 3.5vw;
   }
-  #stats>i {
+  #stats_posts>i {
+  /* #stats>i { */
       font-size: 1.5vw;
       margin-bottom: 0.35vw;
   }
-  #author {
+  #author_posts {
+  /* #author { */
       margin: 1vw;
       font-size: 1.25vw;  
   }
@@ -89,23 +103,179 @@ body {
       #top_bar {
         display: none;
       }
-      #tile {
+        /**/  
+      /* #tile { */
+      #tile_posts {
         width: 49.4%;
         height: 47vw;
         margin: 0%;
       }
-      .overlay {
+        /**/  
+      /* .overlay { */
+      .overlay_posts {
           width: 47.4%;
           height: 47vw;
       }
-      #stats>i {
+      /* #stats>i { */
+      #stats_posts>i {
           font-size: 3.5vw;
       }
-      #stats {
+        /**/  
+      /* #stats { */
+      #stats_posts {
           margin-top: 12vw;
       }
-      #author {
+        /**/  
+      /* #author { */
+      #author_posts {
           font-size: 3.5vw;
             margin: 5vw 3vw;
       }
   }
+  
+
+.nav-tabs > li {
+    width: 50%;
+}
+
+.searchNav {
+    text-align:center;
+    position: fixed!important;
+    bottom: 0!important;
+    width: 100%;
+    background-color: #222!important;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li:hover>a{
+    background-color: #222!important;
+    border: 0px!important;
+    /* color: #3fc3ff!important; */
+    border-bottom: 3px solid #3fc3ff!important;
+    cursor: pointer;
+}
+.nav-tabs>li>a
+{
+    background-color: #222;
+    transition: 0.03s all ease-in;
+}
+.nav-tabs>li>a, 
+.nav-tabs>li>a:focus, 
+.nav-tabs>li>a:hover
+{
+    border: 0px;
+    padding: 10px 30px;
+    border-radius: 0px!important;
+    color: #eee!important;
+    transition: 0.03s all ease-in;
+}
+
+
+/* People tab content */
+
+/* .overlay { */
+.overlay_people {
+    position: absolute;
+    height: 13.33vw;
+    width: 16.4%;
+    opacity: 0;
+    transition: .25s ease-in-out;
+    background-color: rgba(0,0,0,0.6);
+  }
+  /* .overlay1 { */
+  .overlay1_people {
+    position: absolute;
+    text-align: center;
+    height: 10.1vw;
+    width: 11.5%;
+    transition: .25s ease-in-out;
+    background-color: none;
+  }
+  #tile_people:hover .overlay_people {
+    opacity: 1;
+  }
+  #right_people {
+    text-align: center;;
+    }
+    #tile_people {
+        height: 13.33vw;
+        width: 17%;
+        background: url('img/tea.jpg');
+        display: inline-block;
+        margin: 1vw 1.2%;
+        background-size: cover;
+        background-position: center;
+      }
+      #tile1_people {
+        height: 10.2vw;
+        width: 12%;
+        background: rgb(22,22,22);
+        display: inline-block;
+        margin: 2.7vw 3.7%;
+        background-size: cover;
+        background-position: center;
+      }
+      img#user_pic {
+        border-radius: 50%;
+        height:5vw;
+        float: center;
+        margin-top: 1vw;
+        margin-bottom: 0.4vw;
+    }
+    #stats_people {
+        width: 33.33%;
+        float: left;
+        display: inline-block;
+        text-align: center;
+        margin-top: 3.5vw;
+    }
+    #stats_people>i {
+        font-size: 1.5vw;
+        margin-bottom: 0.35vw;
+    }
+    #author_people {
+        margin: 1vw;
+        font-size: 1.25vw;  
+    }
+  
+    @media only screen and (max-width: 786px) {
+        #tile_people {
+          width: 32.5%;
+          height: 30vw;
+          margin: 0%;
+        }
+        #tile1_people{
+          width: 99.5%;
+          margin: 1vw 0px 1vw 0px;
+          height: 20vw;
+          align: center;
+      }
+      .last_tile_people {
+          display: none !important;
+      }
+      #username_people {
+          display: none;
+      }
+       .overlay1_people {
+            width: 95%;
+            height: 20vw;
+            align: center;
+        }
+  
+        img#user_pic {
+            height: 12vw;
+        }
+        .overlay_people {
+            width: 31.4%;
+            height: 30vw;
+        }
+        #stats_people>i {
+            font-size: 3.5vw;
+        }
+        #stats_people {
+            margin-top: 4vw;
+        }
+        #author_people {
+            font-size: 3.5vw;
+              margin: 3vw 3vw;
+        }
+    }
