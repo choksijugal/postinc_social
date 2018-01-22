@@ -15,7 +15,16 @@
         <div class="main">
             <div class="col-lg-3 col-md-3 col-sm-6 sidebar">
                 <div class="overview">
-                    <div class="basic"></div>
+                        <div class="basic row">
+                            <div class="col-xs-5 text-center">
+                                <img class="profilepic" src="img/ProfilePic.jpg" alt="Profile Pic">
+                            </div>
+                            <div class="col-xs-7">
+                                <b class="u_id">selfie</b><br>
+                                <span class="u_name">Yash Tamrakar</span><br>
+                                <span class="u_profession">Student</span>
+                            </div>
+                        </div>
                     <hr>
                     <div class="social">
                         <i class="fa fa-lg fa-facebook" aria-hidden="true"></i>
@@ -126,8 +135,8 @@
                             </div>
                             <div class="actions">
                                 <div class="inputbox form-inline">
-                                    <input type="text" class="form-control" placeholder="Comment Something...">
-                                    <button class="form-control btn-primary">Comment</button>
+                                    <input type="text" id="commentContent" class="form-control" placeholder="x Something...">
+                                    <button id="btnAddComment" class="form-control btn-primary">Suggest</button>
                                 </div>
                             <div class="act" id="act_suggest_postID">
     
@@ -179,21 +188,46 @@
                 });
             }
             hashup();
+            
+            $('.socialactions>div.l').hover(function() {
+                commentType= $(this).attr('id');
+                $('.socialactions>div.l').removeClass('hovertab hovertab_suggest hovertab_comment hovertab_ask');
+                $('#'+commentType).addClass('hovertab hovertab_'+commentType);
+            });
 
-            $('.socialactions>div.l').click(function() {
-                console.log($(this).attr('id'));
+            // $('.socialactions>div.l').mouseleave(function() {
+
+            // });
+
+            $('.socialactions>div.l').on('click', function() {
+                var colors = {'suggest': 'suggestBtn',
+                                'comment': 'commentBtn',
+                                'ask': 'askBtn'};
+
+                commentType= $(this).attr('id');
+                console.log(commentType);
+                console.log(colors[commentType]);
                 var postID = $(this).parents('#postID').attr('id');
 
                 // Fade out all the divs
                 $('.act').fadeOut();
 
                 // Fade in the tab which is demanded
-                $('#act_'+$(this).attr('id')+'_'+postID).fadeIn();
+                $('#act_'+commentType+'_'+postID).fadeIn();
 
                 // Remove the selected underline from all other tab buttons
-                $('.socialactions>div.l').removeClass('hovertab');
-                $('#'+$(this).attr('id')).addClass('hovertab');
+                $('.socialactions>div.l').removeClass('hovertab hovertab_suggest hovertab_comment hovertab_ask');
+                $('#'+commentType).addClass('hovertab hovertab_'+commentType);
+
+                // Comment button
+                $('#btnAddComment').text(commentType.charAt(0).toUpperCase()+commentType.slice(1));
+                $('#btnAddComment').removeClass('suggestBtn commentBtn askBtn').addClass(colors[commentType]);
+
+                // Comment box placeholder
+                $('#commentContent').attr('placeholder', commentType.charAt(0).toUpperCase()+commentType.slice(1)+' something...');
             });
+
+            $('.l#suggest').trigger('click');
 
         </script>
     </body>

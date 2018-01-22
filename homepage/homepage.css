@@ -16,7 +16,7 @@ body {
 div.main {
     /* background-color: #263238; */
     /* height: 90vh; */
-    padding: 3vh 1vw;
+    padding: 3vh 5vw;
 }
 
 div.main > div.col-sm-3 {
@@ -37,6 +37,13 @@ div.main > div > div > ul
 {
     margin: 1vh 0.5vw;
 }
+
+img.profilepic
+{
+    height: 90px;
+    width: 90px;
+}
+
 
 div.whatshot>ul {
     list-style: none;
@@ -130,7 +137,7 @@ div.stats > div, div.social
     width: 80px;
     border-radius: 50%;
 }
-.chip>span::before
+.chip>span::before, .u_id::before, .id_main::before
 {
     content: "@";
 }
@@ -156,7 +163,7 @@ div.status > form > input.form-control
 }
 div.status > form > button.form-control
 {
-    width: 20%;
+    min-width: 20%;
     margin: 0;
     background-color: #3fc3ff!important;
     display: inline;
@@ -208,8 +215,20 @@ div.socialactions > div
 div.socialactions > div:hover, .hovertab
 {
     border-width: 0 0 2px 0;
-    border-color: #3fc3ff;
     border-style: solid;
+}
+
+.hovertab_ask
+{
+    border-color: #ef5350;
+}
+.hovertab_comment
+{
+    border-color: #3fc3ff;
+}
+.hovertab_suggest
+{
+    border-color: #66bb6a;
 }
 
 .socialactions > div.r
@@ -264,15 +283,30 @@ div.socialactions > div:hover, .hovertab
 
 .inputbox >button
 {
-    background-color: #3fc3ff!important;
+    /* background-color: #3fc3ff!important; */
     border: 0px;
     padding: 4px 4px;
     margin: 9px 3px;
     display: inline;
     position:absolute;
-    /* width: 40px; */
+    min-width: 15%!important;
     top:0;
     right:0;
+}
+
+.suggestBtn
+{
+    background-color: #66bb6a!important;
+}
+
+.commentBtn
+{
+    background-color: #3fc3ff!important;
+}
+
+.askBtn
+{
+    background-color: #ef5350!important;
 }
 
 .comment
