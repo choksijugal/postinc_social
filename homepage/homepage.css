@@ -28,7 +28,7 @@ div.main > div.col-sm-3 {
 div.main > div > div
 {
     background-color: #37474f;
-    padding: 3vh 2vw 5vh 2vw;
+    padding: 2vh 2vw 5vh 2vw;
     margin: 2vh 0;
 }
 
@@ -40,8 +40,8 @@ div.main > div > div > ul
 
 img.profilepic
 {
-    height: 90px;
-    width: 90px;
+    height: 70px;
+    width: 70px;
 }
 
 
@@ -66,7 +66,7 @@ hr {
     border-color: #3fc3ff;
     background-color: #3fc3ff;
     color: #3fc3ff;
-    margin: 1vh 0;
+    margin: 2vh 0;
 }
 
 h3 {
@@ -88,6 +88,11 @@ div.location {
 div.skills
 {
     text-align: center;
+}
+div.skills>img
+{
+    width: 24%;
+    margin: 5px;
 }
 
 div.stats {
@@ -127,24 +132,44 @@ div.stats > div, div.social
 }
 
 .chip:hover {
-    background-color: grey;
+    background-color: rgba(0,0,0,0.22);
+}
+
+/* .chip>span:focus, .chip>span:hover, .chip>span  */
+.afterright>a:hover
+{
+    text-decoration: none!important;
 }
 
 .chip>img {
     float: left;
-    margin: -10px 15px 0 -40px;
-    height: 80px;
-    width: 80px;
+    margin: 0px 18px 0 -30px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
 }
-.chip>span::before, .u_id::before, .id_main::before
+.chip>span::before, .u_id::before, .id_main::before, div.name>span>small::before
 {
     content: "@";
 }
-.afterright::after
+/* .afterright::after
 {
     content: 'Privacy | Terms | About Us';
     text-align: center;
+} */
+
+
+.legalstuff
+{
+    display: block;
+    /* text-align: center; */
+    /* min-width: 100%!important; */
+    /* border: 1px dotted red; */
+}
+
+.legalstuff>a
+{
+    color: #eee;
 }
 
 div.status > form
@@ -175,15 +200,27 @@ div.status > form > button.form-control
 
 div.name
 {
+    display: block;
     font-size: 140%;
+}
+
+div.name>span
+{
+    display:inline-block;
+}
+div.name>span>small
+{
+    
+    font-size: 70%;
 }
 
 .postprofilepic
 {
-    vertical-align: middle;
+    vertical-align: text-bottom;
     height: 40px;
     border-radius: 40px;
-    margin-right: 10px;
+    margin-right: 5px;
+    display:inline-block;
 }
 
 .posttext
@@ -236,13 +273,18 @@ div.socialactions > div:hover, .hovertab
     float: right;
 }
 
-.socialactions > div.r::before
+ .socialactions > div.r > i
+ {
+     color: #ef5350;
+ }
+ 
+/* .socialactions > div.r::before
 {
     content: 'â™¡';
     font-size: 150%;
     line-height: 10px;
     align-content: center!important;
-}
+} */
 
 .act
 {
@@ -284,6 +326,7 @@ div.socialactions > div:hover, .hovertab
 .inputbox >button
 {
     /* background-color: #3fc3ff!important; */
+    border-radius: 0px;
     border: 0px;
     padding: 4px 4px;
     margin: 9px 3px;
