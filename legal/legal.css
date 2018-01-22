@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+/* @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow'); */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    color: #e5e5e5;
+    font-family: 'PT Sans', sans-serif;
+    /* font-family: 'PT Sans Narrow', sans-serif; */    
+}
+
+body
+{
+    background-color: #263238; 
+}
+
+div.main
+{
+    padding: 3%;
+    
+}
+
+div.main> div
+{
+    margin: 10px 120px;
+}
+
+hr
+{
+    border-color: #3fc3ff;
+    background-color: #3fc3ff;
+    color: #3fc3ff;
+    margin: 2vh 0;
+
+}
+
+h2
+{
+    display: block;
+    text-align: center;
+}
