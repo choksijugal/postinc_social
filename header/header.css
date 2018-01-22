@@ -95,7 +95,7 @@ input#search {
     opacity : 0.6;
 }
 img#message_pic {
-    height: 64px;
+    height: 46px;
     border-radius: 100%;
 }
 .drop-wide>li>a {
@@ -105,9 +105,11 @@ p>a, p>a:hover {
     text-decoration: none;
 }
 #notification {
-    margin-top: 10px;
+    margin-top: 4px;
 }
-
+.media-left{
+    vertical-align: middle;
+}
 @media only screen and (min-width: 768px) {
    
 #check.open>.dropdown-toggle {
@@ -128,7 +130,7 @@ transition: ease-in-out 0.2s;
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
-
+    border-radius: 0px !important;
     max-height: 0;
     display: block;
     overflow: hidden;
@@ -155,6 +157,7 @@ transition: ease-in-out 0.2s;
 #check.open>.dropdown-menu {
     max-height: 400px;
     opacity: 1;
+    border-radius: 0px;
 }
 .dropdown-menu-hover {
     min-width: 200px !important;
@@ -206,5 +209,6 @@ button#search {
 .navbar-form {
     border-style: none !important;
     margin-top: -25px;
+    padding: 0px;
 }
 }
