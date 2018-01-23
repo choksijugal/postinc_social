@@ -41,6 +41,9 @@ body {
   #tile:hover .overlay {
     opacity: 1;
   }
+  #tile2:hover .overlay {
+    opacity: 1;
+  }
   
   .text {
     color: white;
@@ -75,12 +78,28 @@ body {
     background-size: cover;
     background-position: center;
   }
+  #tile2 .overlay {
+      text-align: center !important;
+      padding-top: 5.5vw;
+      font-size: 1.5vw;
+      width: 16.25%;
+      height: 13.2vw;
+  }
   #tile1 {
     height: 10.2vw;
     width: 12%;
     background: rgb(22,22,22);
     display: inline-block;
     margin: 2.7vw 3.7%;
+    background-size: cover;
+    background-position: center;
+  }
+  #tile2 {
+    height: 13.33vw;
+    width: 17%;
+    background: url('img/tea.jpg');
+    display: inline-block;
+    margin: 1vw 1.2%;
     background-size: cover;
     background-position: center;
   }
@@ -106,19 +125,37 @@ img#user_pic {
     margin-top: 1vw;
     margin-bottom: 0.4vw;
 }
+#user {
+    font-weight: bold;
+    font-size: 16px;
+}
+#username {
+    font-weight: normal;
+    font-size: 13px;
+}
+#row {
+    display: inline;
+}
+.mobile_show {
+    display: none !important;
+}
+
   @media only screen and (max-width: 786px) {
       #top_bar {
         display: none;
       }
-      #tile {
-        width: 32.5%;
-        height: 30vw;
+      #tile, #tile2 { 
+        width: 43.23%;
+        height: 40vw;
         margin: 0%;
+        padding: 0px;
+        display: inline-block;
       }
       #tile1{
-        width: 99.5%;
-        margin: 1vw 0px 1vw 0px;
-        height: 20vw;
+        width: 100%;
+        margin: 0vw 0px 0vw 0px;
+        padding: 1.25vw 0vw 0vw 0vw;
+        height: 12vw;
         align: center;
     }
     .last_tile {
@@ -127,18 +164,18 @@ img#user_pic {
     #username {
         display: none;
     }
+    #results {
+        padding: 0;
+    }
      .overlay1 {
           width: 95%;
           height: 20vw;
-          align: center;
+          text-align: left !important;
+          padding-left: 6vw;
       }
 
       img#user_pic {
-          height: 12vw;
-      }
-      .overlay {
-          width: 31.4%;
-          height: 30vw;
+          height: 7.5vw;
       }
       #stats>i {
           font-size: 3.5vw;
@@ -150,4 +187,30 @@ img#user_pic {
           font-size: 3.5vw;
             margin: 3vw 3vw;
       }
+      
+  #user {
+    font-size: 14px;
+    display: inline;
+    margin-left: 2vw;
+}
+img#user_pic {
+    display: inline;
+}
+.overlay {
+    display: none;
+}
+#row {
+    display: inline-block;
+    width: 100%;
+    height: 44vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.mobile_show {
+    display: inline-block !important;
+}
+::-webkit-scrollbar {
+  width:1vw !important;
+}
   }
