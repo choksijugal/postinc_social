@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 /* @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow'); */
 body {
-    
     background: #263238;
 }
 * {
@@ -12,7 +11,7 @@ body {
     /* font-family: 'PT Sans Narrow', sans-serif; */    
 }
 
-.sidebar {
+.commentbar {
     background: #37474f;
     padding: 10px 25px;
 }
@@ -22,37 +21,11 @@ body {
     padding: 0px;
 }
 div.main {
-    /* background-color: #263238; */
-    /* height: 90vh; */
-    padding-top: 50px;
+    max-height: 90vh;
+    padding-top: 20px;
+    margin-bottom: 20px;
 }
 
-div.main > div.col-sm-3 {
-    position: sticky;
-    top: 0;
-}
-
-/* div.main > div:nth-child(odd) > div */
-div.main > div > div
-{
-    background-color: none;
-    padding: 3vh 2vw 5vh 2vw;
-    margin: 2vh 0;
-    border: none;
-}
-
-/* div.main > div:nth-child(odd) > div > ul */
-div.main > div > div > ul
-{
-    margin: 1vh 0.5vw;
-}
-
-hr {
-    border-color: #3fc3ff;
-    background-color: #3fc3ff;
-    color: #3fc3ff;
-    margin: 1vh 0;
-}
 
 .chip {
     width: 100%;
@@ -77,48 +50,34 @@ hr {
     width: 80px;
     border-radius: 50%;
 }
-.chip>span::before
+.chip>span::before,  div.name>span>small::before
 {
     content: "@";
 }
 
-div.status > form
-{
-    position:relative;
-    overflow:hidden;
-    white-space: nowrap;
-}
-
-div.status > form > input.form-control
-{
-    width: 78%;
-    margin: 0;
-    display: inline-block;
-    overflow: hidden;
-}
-div.status > form > button.form-control
-{
-    width: 20%;
-    margin: 0;
-    background-color: #3fc3ff!important;
-    display: inline;
-    float: right;
-    position:absolute;
-    top:0;
-    right:0;
-}
-
 div.name
 {
+    display: block;
     font-size: 140%;
+}
+
+div.name>span
+{
+    display:inline-block;
+}
+div.name>span>small
+{
+    
+    font-size: 70%;
 }
 
 .postprofilepic
 {
-    vertical-align: middle;
+    vertical-align: text-bottom;
     height: 40px;
     border-radius: 40px;
-    margin-right: 10px;
+    margin-right: 5px;
+    display:inline-block;
 }
 
 .posttext
@@ -132,11 +91,50 @@ max-height: 100%;
 max-width: 100%;
 }
 
+.suggestBtn
+{
+    background-color: #66bb6a!important;
+}
+
+.commentBtn
+{
+    background-color: #3fc3ff!important;
+}
+
+.askBtn
+{
+    background-color: #ef5350!important;
+}
+
+.hovertab_ask
+{
+    border-color: #ef5350;
+}
+.hovertab_comment
+{
+    border-color: #3fc3ff;
+}
+.hovertab_suggest
+{
+    border-color: #66bb6a;
+}
+
+.socialactions > div.r
+{
+    float: right;
+}
+
+ .socialactions > div.r > i
+ {
+     color: #ef5350;
+ }
+
+
 .socialactions {
     background-color: #212121;
     clear: both;
     overflow: hidden;
-    margin: 0px -25px;
+    margin: 0px -15px;
 }
 
 div.socialactions > div
@@ -152,7 +150,7 @@ div.socialactions > div
 div.socialactions > div:hover, .hovertab
 {
     border-width: 0 0 2px 0;
-    border-color: #3fc3ff;
+    /* border-color: #3fc3ff; */
     border-style: solid;
 }
 
@@ -163,7 +161,7 @@ div.socialactions > div:hover, .hovertab
 
 .socialactions > div.r::before
 {
-    content: 'â™¡';
+    /* content: 'â™¡'; */
     font-size: 150%;
     line-height: 10px;
     align-content: center!important;
@@ -179,7 +177,7 @@ div.socialactions > div:hover, .hovertab
     background-color: #e5e5e5!important;
 }
 .actions {
-    margin: 0px -25px;
+    margin: 0px -15px;
 }
 
 .inputbox {
@@ -211,13 +209,15 @@ div.socialactions > div:hover, .hovertab
 
 .inputbox >button
 {
-    background-color: #3fc3ff!important;
+    border-radius: 0px;
     border: 0px;
-    padding: 4px 4px;
+    line-height: 8px;
+    padding: 0px 3px;
+    width: 80px!important;
     margin: 9px 3px;
-    display: inline;
+    /* display: inline; */
     position:absolute;
-    /* width: 40px; */
+    /* min-width: 15%!important; */
     top:0;
     right:0;
 }
@@ -249,4 +249,23 @@ div.socialactions > div:hover, .hovertab
 #message, .media-heading>b, #notification, #notification>b, #message_date, #uname
 {
     color: #333!important;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .1);
+    /* background-color: #F5F5F5; */
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(0, 0, 0, .1);
+    /* background-color: #F5F5F5; */
+}
+
+::-webkit-scrollbar-thumb {
+    /* border-radius: 10px; */
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .3);
 }

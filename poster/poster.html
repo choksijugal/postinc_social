@@ -11,99 +11,118 @@
 </head>
 
 <body>
-    <!-- <div class="nav">
-    
-        </div> -->
     <div class="main">
         <div class="col-md-1">
         </div>
-        <!-- <div class="col-lg-1 col-md-hide col-sm-hide"></div> -->
-
-        <!-- <div class="col-lg-1 col-md-hide col-lg-push-1 col-sm-hide"></div> -->
         <div class="col-lg-6 col-md-6 col-sm-12 ">
-
-            <!-- Add the list of posts here -->
             <div id="image">
-
-                <div >
+                <div>
                     <div class="postimg">
                         <img src="img/tea.jpg" alt="" class="postimg">
-                        <!-- Showing respective tabs via jQuery has been done. Just load the comments, suggestions 
-                            and questions into the respective blocks down there in act_suggest, act_comment and act_ask-->
-
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12 sidebar afterright">
-        <div>
+        <div class="col-lg-4 col-md-4 col-sm-12 commentbar">
             <div class="name">
-                <img src="img/ProfilePic2.jpg" alt="" class="postprofilepic"> Aakarsh Chopra
+                <img src="img/ProfilePic2.jpg" alt="" class="postprofilepic">
+                <span>
+                    Aakarsh Chopra
+                    <br>
+                    <small class="text-muted">alcatraz627 &nbsp;
+                        <i class="fa fa-clock-o" style="color: grey" aria-hidden="true"></i>
+                        One hour ago</small>
+                </span>
             </div>
             <div class="posttext">
-                Tea and Rains!
-                <br>#Tea #Hot #Rains
-            </div>
-            <div class="socialactions">
-                <div class="l" id="suggest">Suggest</div>
-                <div class="l" id="comment">Comment</div>
-                <div class="l" id="ask">Ask</div>
-                <div class="r">
-                    <!-- <i class="fa fa-heart" aria-hidden="true"></i> -->
-                    Like
-                </div>
-            </div>
-            <div class="actions">
-                <div class="inputbox form-inline">
-                    <input type="text" class="form-control" placeholder="Comment Something...">
-                    <button class="form-control btn-primary">Comment</button>
-                </div>
-                <div class="act" id="act_suggest">
-
-                    <!-- This is a block of comment. Use it as a template while looping through comments -->
-                    <div class="comment">
-                        <div class="comment_name">
-                            <img src="img/ProfilePic1.jpg" alt="" class="commentprofilepic"> Jugal Choksi
-                        </div>
-                        <div class="commenttext">
-                            Awesome design bro!
+                Tea and Rains! &gt;3 #tea #rains </div>
+            <div>
+                <div class="postimg">
+                    <div class="socialactions">
+                        <div class="l" id="suggest">Suggest</div>
+                        <div class="l" id="comment">Comment</div>
+                        <div class="l" id="ask">Ask</div>
+                        <div class="r">
+                            <i class="fa fa-heart" aria-hidden="true"></i>&nbsp;
+                             Like
                         </div>
                     </div>
+                    <div class="actions">
+                        <div class="inputbox form-inline">
+                            <input type="text" id="commentContent" class="form-control" placeholder="x Something...">
+                            <button id="btnAddComment" class="form-control btn-primary">Suggest</button>
+                        </div>
+                        <div class="act" id="act_suggest_postID">
 
-                </div>
-                <div class="act" id="act_comment">
-                    Comment blocks go here
-                </div>
-                <div class="act" id="act_ask">
-                    Ask blocks go here
+                            <!-- This is a block of comment. Use it as a template while looping through comments -->
+                            <div class="comment">
+                                <div class="comment_name">
+                                    <img src="img/ProfilePic1.jpg" alt="" class="commentprofilepic"> Jugal Choksi
+                                </div>
+                                <div class="commenttext">
+                                    Awesome design bro!
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="act" id="act_comment_postID">
+                            Comment blocks go here
+                        </div>
+                        <div class="act" id="act_ask_postID">
+                            Ask blocks go here
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
-        // $(function () {
-        //     var sidebar = $('.sidebar');
-        //     var top = sidebar.offset().top - parseFloat(sidebar.css('margin-top'));
+            function hashup() {
+                $("body").children().each(function() {
+                    // Adds a hyperlink to every hashtagged word, continuing without spaces
+                    $(this).html($(this).html().replace(/(#)([A-Z,a-z,0-9]+)\b/g,"<a href=\"trending_hashtags/$2\">$&</a>"));
+                });
+            }
+            hashup();
+            
+            $('.socialactions>div.l').hover(function() {
+                commentType= $(this).attr('id');
+                $('.socialactions>div.l').removeClass('hovertab hovertab_suggest hovertab_comment hovertab_ask');
+                $('#'+commentType).addClass('hovertab hovertab_'+commentType);
+            });
 
-        //     $(window).scroll(function (event) {
-        //         var y = $(this).scrollTop();
-        //         if (y >= top) {
-        //             sidebar.addClass('fixed');
-        //         } else {
-        //             sidebar.removeClass('fixed');
-        //         }
-        //     });
-        // });
-        $('.socialactions>div.l').click(function () {
-            console.log($(this).attr('id'));
-            $('.act').fadeOut();
-            $('#act_' + $(this).attr('id')).fadeIn();
-            $('.socialactions>div.l').removeClass('hovertab');
-            $('#' + $(this).attr('id')).addClass('hovertab');
-        });
+            $('.socialactions>div.l').on('click', function() {
+                var colors = {'suggest': 'suggestBtn',
+                                'comment': 'commentBtn',
+                                'ask': 'askBtn'};
+
+                commentType= $(this).attr('id');
+                console.log(commentType);
+                console.log(colors[commentType]);
+                var postID = $(this).parents('#postID').attr('id');
+
+                // Fade out all the divs
+                $('.act').fadeOut();
+
+                // Fade in the tab which is demanded
+                $('#act_'+commentType+'_'+postID).fadeIn();
+
+                // Remove the selected underline from all other tab buttons
+                $('.socialactions>div.l').removeClass('hovertab hovertab_suggest hovertab_comment hovertab_ask');
+                $('#'+commentType).addClass('hovertab hovertab_'+commentType);
+
+                // Comment button
+                $('#btnAddComment').text(commentType.charAt(0).toUpperCase()+commentType.slice(1));
+                $('#btnAddComment').removeClass('suggestBtn commentBtn askBtn').addClass(colors[commentType]);
+
+                // Comment box placeholder
+                $('#commentContent').attr('placeholder', commentType.charAt(0).toUpperCase()+commentType.slice(1)+' something...');
+            });
+
+            $('.l#suggest').trigger('click');
     </script>
 </body>
 
